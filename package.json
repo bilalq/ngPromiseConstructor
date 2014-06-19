@@ -1,0 +1,33 @@
+{
+  "name": "ngPromiseConstructor",
+  "version": "0.0.0",
+  "description": "$q promises that support the revealing constructor pattern",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bilalq/ngPromiseConstructor.git"
+  },
+  "author": "Bilal Quadri <bilalquadri92@gmail.com> (http://bilalquadri.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bilalq/ngPromiseConstructor/issues"
+  },
+  "homepage": "https://github.com/bilalq/ngPromiseConstructor",
+  "devDependencies": {
+    "gulp": "^3.8.0",
+    "gulp-bower": "0.0.6",
+    "gulp-jshint": "^1.6.2",
+    "gulp-karma": "0.0.4",
+    "karma": "^0.12.16",
+    "karma-coverage": "^0.2.4",
+    "karma-growl-reporter": "^0.1.1",
+    "karma-jasmine": "^0.1.5",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
