@@ -1,6 +1,8 @@
 {
   "asi": true,
+  "indent": 2,
   "laxcomma": true,
+  "quotmark": true,
   "undef": true,
   "globals": {
     "angular": false

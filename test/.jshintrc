@@ -1,0 +1,21 @@
+{
+  "asi": true,
+  "indent": 2,
+  "quotmark": true,
+  "laxcomma": true,
+  "undef": true,
+  "globals": {
+    "angular": false,
+    "jasmine": false,
+    "spyOn": false,
+    "describe": false,
+    "xdescribe": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "it": false,
+    "xit": false,
+    "expect": false,
+    "module": false,
+    "inject": false
+  }
+}
