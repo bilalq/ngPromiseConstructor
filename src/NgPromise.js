@@ -20,7 +20,7 @@ angular.module('PromiseConstructor', [])
    * Constructor that takes in a resolver
    *
    * @param {resolverCallback} resolver - Resolver callback
-   * @returns {$q Promise}
+   * @returns {Promise}
    */
   function NgPromise(resolver) {
     if (!angular.isFunction(resolver)) {
@@ -52,6 +52,28 @@ angular.module('PromiseConstructor', [])
     resolver(resolve, reject)
 
     return deferred.promise
+  }
+
+  /**
+   * Returns a resolved promise of the given value
+   *
+   * @param {Any} val
+   * @returns {Promise}
+   */
+  NgPromise.resolve = function(val) {
+    var deferred = $q.defer()
+    deferred.resolve(val)
+    return deferred.promise
+  }
+
+  /**
+   * Returns a rejected promise of the given value
+   *
+   * @param {Any} val
+   * @returns {Promise}
+   */
+  NgPromise.reject = function(val) {
+    return $q.reject(val)
   }
 
   return NgPromise

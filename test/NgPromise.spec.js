@@ -36,6 +36,11 @@ describe('NgPromise', function() {
         expect(invocation).not.toThrow()
       })
     })
+
+    it('has static functions for resolving/rejecting', function() {
+      expect(typeof NgPromise.resolve).toBe('function')
+      expect(typeof NgPromise.reject).toBe('function')
+    })
   })
 
   describe('functionality', function() {
@@ -100,6 +105,29 @@ describe('NgPromise', function() {
         reject('bar')
       })).toThrow()
     })
+
+    describe('static resolve method', function() {
+      it('returns a resolved promise', function() {
+        var promise = NgPromise.resolve('foo')
+        promise.then(happyPath, sadPath)
+        promise.then(function(res) {
+          expect(res).toBe('foo')
+        })
+        $rootScope.$digest();
+      })
+    })
+
+    describe('static reject method', function() {
+      it('returns a rejected promise', function() {
+        var promise = NgPromise.reject('foo')
+        promise.then(sadPath, happyPath)
+        promise.catch(function(err) {
+          expect(err).toBe('foo')
+        })
+        $rootScope.$digest();
+      })
+    })
+
   })
 
 })
